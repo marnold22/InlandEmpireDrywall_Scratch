@@ -1,9 +1,10 @@
+:root {
+    --blue: rgb(35,43,56);
+    --yellow: rgb(251,173,58);
+  }
+
 * {
     font-family: 'Poppins';
-}
-
-.navbar-item, .navbar-burger {
-    font-size: 1.1rem;
 }
 
 .ied-hero {
@@ -11,8 +12,4 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.bg-blue {
-    background-color: #184988;
 }
