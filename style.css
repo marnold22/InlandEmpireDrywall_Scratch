@@ -1,0 +1,74 @@
+:root {
+    --blue: rgb(35,43,56);
+    --yellow: rgb(241, 174, 74);
+}
+
+/* UTILITIES */
+.yellow-font {
+    color: var(--yellow) !important;
+}
+.yellow-outline {
+    color: var(--yellow);
+    background-color: transparent;
+    border-color: var(--yellow);
+}
+.yellow-outline:hover {
+    color: var(--blue);
+    background-color: var(--yellow);
+    border-color: var(--blue);
+}
+
+/* DEFAULTS */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+/* HERO BANNER & NAVBAR SECTION */
+.hero.is-info {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url('/images/company/Hero-Banner.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.hero .nav,
+.hero.is-success .nav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.hero .title {
+    font-size: 4rem;
+}
+.hero-body {
+    padding-top: 10rem;
+}
+.hero-sub {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+.hero-col {
+    margin-top: 6rem;
+}
+.hero-container {
+    padding: 2rem;
+}
+.hero-box {
+    background-color: rgba(35,43,56, 0.8);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-color: var(--yellow);
+}
+.hero-box:hover {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    transition: 200ms linear;
+}
+
+/* SECTION 2 */
+.sec2-space {
+    padding: .5rem;
+}
