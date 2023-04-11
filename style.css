@@ -1,4 +1,18 @@
 * {
-    margin: 0;
-    padding: 0;
+    font-family: 'Poppins';
+}
+
+.navbar-item, .navbar-burger {
+    font-size: 1.1rem;
+}
+
+.ied-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/company/Hero-Banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-blue {
+    background-color: #184988;
 }
