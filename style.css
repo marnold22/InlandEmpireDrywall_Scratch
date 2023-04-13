@@ -1,5 +1,5 @@
 :root {
-    /* --blue: rgb(35,43,56); */
+    --blue_2: rgb(35,43,56);
     --blue: rgba(18, 22, 29, 0.8);
     --yellow: rgb(241, 174, 74);
     --grey: #3d3d3d;
@@ -29,6 +29,9 @@
 .bg-blue {
     background-color: var(--blue);
 }
+.bg-blue-2 {
+    background-color: var(--blue_2);
+}
 
 /* DEFAULTS */
 * {
@@ -38,7 +41,7 @@
 }
 
 /* HERO BANNER & NAVBAR SECTION */
-.hero.is-info {
+.hero-home {
     background: linear-gradient(rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)), url('/images/company/Hero-Banner.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -53,9 +56,6 @@
 }
 .hero .title {
     font-size: 4rem;
-}
-.hero-body {
-    padding-top: 10rem;
 }
 .hero-sub {
     font-size: 1.5rem;
@@ -80,6 +80,22 @@
     transition: 200ms linear;
 }
 
+/* SERVICES SECTION */
+.services-parallax {
+    background: linear-gradient(rgba(18, 22, 29, 0.85),rgba(18, 22, 29, 0.85)), url('/images/company/Project-12.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.services-card {
+    background-color: var(--blue);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-color: var(--yellow);
+}
+
 /* MATERIALS SECTION */
 .card:hover {
     -webkit-transform: scale(1.03);
@@ -94,6 +110,11 @@
     font-size: 4rem;
     font-weight: 500;
     padding-bottom: 5rem;
+}
+
+/* BRANDS SECTION */
+.slider-navigation-next, .slider-navigation-previous, .slider-pagination {
+    display: none;
 }
 
 /* LOCATION SECTION */
@@ -125,4 +146,38 @@
     font-size: 1rem;
     padding-bottom: 1rem;
     font-weight: 200;
+}
+
+
+/* ---------------- ABOUT PAGE ---------------- */
+/* HERO BANNER */
+.hero-about {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url('/images/company/Building.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.rick-spacer {
+    padding-bottom: 9.5rem;
+}
+
+.mark-spacer {
+    padding-bottom: 7rem;
+}
+
+.clint-spacer {
+    padding-bottom: 5rem;
+}
+
+.jaime-spacer {
+    padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .rick-spacer, .mark-spacer, .clint-spacer, .jaime-spacer {
+        display: none;
+    }
 }

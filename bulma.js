@@ -15,6 +15,7 @@ const carousels = bulmaCarousel.attach('.carousel', {
     duration: 1500,
     loop: true,
     navigation: false,
-    slidesToScroll: 3,
-    slidesToShow: 5
+    slidesToShow: 5,
+    slidesToScroll: 2,
+    breakpoints: [{ changePoint: 500, slidesToShow: 1, slidesToScroll: 1 }, { changePoint: 768, slidesToShow: 3, slidesToScroll: 3 } ]
 });
