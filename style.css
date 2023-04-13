@@ -1,6 +1,9 @@
 :root {
-    --blue: rgb(35,43,56);
+    /* --blue: rgb(35,43,56); */
+    --blue: rgba(18, 22, 29, 0.8);
     --yellow: rgb(241, 174, 74);
+    --grey: #3d3d3d;
+    --dark: #222222;
 }
 
 /* UTILITIES */
@@ -16,6 +19,15 @@
     color: var(--blue);
     background-color: var(--yellow);
     border-color: var(--blue);
+}
+.bg-grey {
+    background-color: #f9f9f9;
+}
+.bg-dark {
+    background-color: var(--dark);
+}
+.bg-blue {
+    background-color: var(--blue);
 }
 
 /* DEFAULTS */
@@ -56,7 +68,7 @@
     padding: 2rem;
 }
 .hero-box {
-    background-color: rgba(35,43,56, 0.8);
+    background-color: var(--blue);
     border: 1px solid transparent;
     border-radius: 4px;
     border-color: var(--yellow);
@@ -68,7 +80,41 @@
     transition: 200ms linear;
 }
 
-/* SECTION 2 */
-.sec2-space {
-    padding: .5rem;
+/* MATERIALS SECTION */
+.card:hover {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    transition: 200ms linear;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bold-title {
+    color: var(--grey);
+    font-size: 4rem;
+    font-weight: 500;
+    padding-bottom: 5rem;
+}
+
+/* LOCATION SECTION */
+.location-parallax {
+    background: linear-gradient(rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.85)), url('/images/map-small.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bold-title-lt {
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+
+.location-text {
+    color: white;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 200;
 }

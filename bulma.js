@@ -8,3 +8,13 @@
         menu.classList.toggle('is-active');
     });
 })();
+
+
+const carousels = bulmaCarousel.attach('.carousel', {
+    autoplay: true,
+    duration: 1500,
+    loop: true,
+    navigation: false,
+    slidesToScroll: 3,
+    slidesToShow: 5
+});
