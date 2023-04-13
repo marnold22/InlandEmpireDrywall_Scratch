@@ -105,6 +105,14 @@
     background-size: cover;
 }
 
+.location:hover {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    transition: 200ms linear;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .bold-title-lt {
     color: white;
     font-size: 2rem;
