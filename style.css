@@ -1,5 +1,6 @@
 :root {
-    --blue_2: rgb(35,43,56);
+    --light-blue: rgb(8, 50, 92);
+    --blue-no-alpha: rgb(35,43,56);
     --blue: rgba(18, 22, 29, 0.8);
     --yellow: rgb(241, 174, 74);
     --grey: #3d3d3d;
@@ -20,6 +21,16 @@
     background-color: var(--yellow);
     border-color: var(--blue);
 }
+.blue-btn {
+    color: white;
+    background-color: var(--light-blue);
+}
+.blue-btn:hover {
+    color: var(--light-blue);
+    background-color: transparent;
+    border-color: var(--light-blue);
+    border-width: 2px;
+}
 .bg-grey {
     background-color: #f9f9f9;
 }
@@ -30,7 +41,7 @@
     background-color: var(--blue);
 }
 .bg-blue-2 {
-    background-color: var(--blue_2);
+    background-color: var(--blue-no-alpha);
 }
 
 /* DEFAULTS */
@@ -88,7 +99,6 @@
     -o-background-size: cover;
     background-size: cover;
 }
-
 .services-card {
     background-color: var(--blue);
     border: 1px solid transparent;
@@ -104,13 +114,16 @@
     transition: 200ms linear;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .bold-title {
     color: var(--grey);
     font-size: 4rem;
     font-weight: 500;
     padding-bottom: 5rem;
 }
+.btn-column {
+    padding-top: 2rem;
+}
+
 
 /* BRANDS SECTION */
 .slider-navigation-next, .slider-navigation-previous, .slider-pagination {
@@ -125,7 +138,6 @@
     -o-background-size: cover;
     background-size: cover;
 }
-
 .location:hover {
     -webkit-transform: scale(1.03);
     -ms-transform: scale(1.03);
@@ -133,14 +145,12 @@
     transition: 200ms linear;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .bold-title-lt {
     color: white;
     font-size: 2rem;
     font-weight: 300;
     padding-bottom: 1rem;
 }
-
 .location-text {
     color: white;
     font-size: 1rem;
@@ -159,23 +169,18 @@
     -o-background-size: cover;
     background-size: cover;
 }
-
 .rick-spacer {
     padding-bottom: 9.5rem;
 }
-
 .mark-spacer {
     padding-bottom: 7rem;
 }
-
 .clint-spacer {
     padding-bottom: 5rem;
 }
-
 .jaime-spacer {
     padding-bottom: 2rem;
 }
-
 @media screen and (max-width: 768px) {
     .rick-spacer, .mark-spacer, .clint-spacer, .jaime-spacer {
         display: none;
