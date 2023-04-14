@@ -40,12 +40,12 @@
                     <div id="navbarMenu" class="navbar-menu">
                         <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class=" is-white is-outlined" href="/">
+                                <a class=" is-white is-outlined" href="index.html">
                                     <span>HOME</span>
                                 </a>
                             </span>
                             <span class="navbar-item">
-                                <a class="is-white is-outlined" href="#">
+                                <a class="is-white is-outlined" href="products.html">
                                     <span>PRODUCTS</span>
                                 </a>
                             </span>
@@ -277,7 +277,7 @@
 
     <!-- BRANDS CAROUSEL -->
     <section class="section is-medium">
-        <div class="container">
+        <div class="container carousel-container">
             <h1 class="bold-title has-text-centered">Fantastic Brands We Work With</h1>
             <!-- Start Carousel -->
             <div id="carousel" class="carousel">
@@ -368,6 +368,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer bg-dark">
         <div class="content has-text-centered yellow-font">
             <p class="" >© 2023 Inland Empire Drywall. All rights reserved.</p>
@@ -377,6 +378,17 @@
 
     <!-- BULMA CAROUSEL -->
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script>
+        const carousels = bulmaCarousel.attach('.carousel', {
+            autoplay: true,
+            duration: 1500,
+            loop: true,
+            navigation: false,
+            slidesToShow: 5,
+            slidesToScroll: 2,
+            breakpoints: [{ changePoint: 500, slidesToShow: 1, slidesToScroll: 1 }, { changePoint: 768, slidesToShow: 3, slidesToScroll: 3 } ]
+        });
+    </script>
     <script async type="text/javascript" src="bulma.js"></script>
 </body>
 
