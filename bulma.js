@@ -9,13 +9,16 @@
     });
 })();
 
-
-const carousels = bulmaCarousel.attach('.carousel', {
-    autoplay: true,
-    duration: 1500,
-    loop: true,
-    navigation: false,
-    slidesToShow: 5,
-    slidesToScroll: 2,
-    breakpoints: [{ changePoint: 500, slidesToShow: 1, slidesToScroll: 1 }, { changePoint: 768, slidesToShow: 3, slidesToScroll: 3 } ]
-});
+function openTab(evt, tabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("content-tab");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " is-active";
+}

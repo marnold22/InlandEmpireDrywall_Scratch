@@ -124,7 +124,6 @@
     padding-top: 2rem;
 }
 
-
 /* BRANDS SECTION */
 .slider-navigation-next, .slider-navigation-previous, .slider-pagination {
     display: none;
@@ -158,6 +157,27 @@
     font-weight: 200;
 }
 
+/* ---------------- PRODUCTS PAGE ---------------- */
+/* HERO BANNER */
+.hero-prod {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url('/images/company/Metal-2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.carousel-container {
+    overflow: hidden;
+}
+.content-tab {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    border-color: var(--blue);
+}
+.car-item {
+    padding: 1rem;
+}
 
 /* ---------------- ABOUT PAGE ---------------- */
 /* HERO BANNER */
