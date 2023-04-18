@@ -7,6 +7,9 @@
     --dark: #222222;
 }
 
+/* SCROLL */
+html{scroll-behavior:smooth}
+
 /* UTILITIES */
 .yellow-font {
     color: var(--yellow) !important;
