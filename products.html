@@ -205,7 +205,7 @@
 
         <div class="container carousel-container">
             <!-- Start Carousel -->
-            <div id="prod-carousel" class="carousel">
+            <div id="prod-carousel" class="prod-carousel">
                 <div class="car-item">
                     <!-- Slide Content -->
                     <figure class="image">
@@ -237,6 +237,71 @@
                     </figure>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- BRANDS CAROUSEL -->
+    <section class="section is-medium">
+        <div class="container carousel-container">
+            <h1 class="bold-title has-text-centered">Fantastic Brands We Work With</h1>
+            <!-- Start Carousel -->
+            <div id="brand-carousel" class="brand-carousel">
+                <div class="item-1">
+                    <!-- Slide Content -->
+                    <figure class="image is-4by3">
+                        <img src="/images/logos/American-Gypsum.jpg" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="item-2">
+                    <!-- Slide Content -->
+                    <figure class="image is-4by3">
+                        <img src="/images/logos/Beadex.jpg" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="item-3">
+                    <!-- Slide Content -->
+                    <figure class="image is-4by3">
+                        <img src="/images/logos/Georia-Pacific.jpg" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="item-4">
+                    <!-- Slide Content -->
+                    <figure class="image is-4by3">
+                        <img src="/images/logos/Grabber.jpg" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="item-5">
+                    <!-- Slide Content -->
+                    <figure class="image is-4by3">
+                        <img src="/images/logos/Hamilton.png" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="item-6">
+                    <!-- Slide Content -->
+                    <figure class="image is-4by3">
+                        <img src="/images/logos/Johns-Manville.jpg" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="item-7">
+                    <!-- Slide Content -->
+                    <figure class="image is-4by3">
+                        <img src="/images/logos/Owens-Corning.jpg" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="item-8">
+                    <!-- Slide Content -->
+                    <figure class="image is-4by3">
+                        <img src="/images/logos/Scorpion.png" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="item-9">
+                    <!-- Slide Content -->
+                    <figure class="image is-4by3">
+                        <img src="/images/logos/Trim-Tex.png" alt="Placeholder image">
+                    </figure>
+                </div>
+            </div>
+            <!-- End Carousel -->
         </div>
     </section>
 
@@ -281,13 +346,23 @@
     <!-- BULMA CAROUSEL -->
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
     <script>
-        const carousels = bulmaCarousel.attach('.carousel', {
+        const prodCarousels = bulmaCarousel.attach('.prod-carousel', {
             autoplay: true,
             duration: 1500,
             loop: true,
             navigation: false,
             slidesToShow: 2,
             slidesToScroll: 1,
+            breakpoints: [{ changePoint: 500, slidesToShow: 1, slidesToScroll: 1 }, { changePoint: 768, slidesToShow: 3, slidesToScroll: 3 } ]
+        });
+
+        const brandCarousels = bulmaCarousel.attach('.brand-carousel', {
+            autoplay: true,
+            duration: 900,
+            loop: true,
+            navigation: false,
+            slidesToShow: 5,
+            slidesToScroll: 2,
             breakpoints: [{ changePoint: 500, slidesToShow: 1, slidesToScroll: 1 }, { changePoint: 768, slidesToShow: 3, slidesToScroll: 3 } ]
         });
     </script>
