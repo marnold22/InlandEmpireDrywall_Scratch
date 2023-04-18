@@ -51,7 +51,7 @@ html{scroll-behavior:smooth}
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 /* HERO BANNER & NAVBAR SECTION */
@@ -128,6 +128,18 @@ html{scroll-behavior:smooth}
 }
 .btn-column {
     padding-top: 2rem;
+}
+
+/* ABOUT/CLIENTS SECTION */
+.about-title {
+    color: var(--grey);
+    font-size: 4rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+.about-text {
+    font-weight: 900;
+    font-size: 1.5rem;
 }
 
 /* BRANDS SECTION */
@@ -207,8 +219,77 @@ html{scroll-behavior:smooth}
 .jaime-spacer {
     padding-bottom: 2rem;
 }
+
+/* MEDIA QUERIES */
+
+/* MOBILE */
 @media screen and (max-width: 768px) {
+    .title-pad {
+        padding-top: 1rem;
+    }
+    .container-pad {
+        padding-top: 1rem;
+    }
+    #services-desktop {
+        display: none;
+    }
+    .bold-title {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+    .stars {
+        display: none;
+    }
+    .bold-title-lt {
+        font-size: 1.5rem;
+    }
+    .location-text {
+        font-size: .8rem;
+    }
+    #btn-tablet {
+        display: none;
+    }
+    /* ABOUT PAGE MOBILE */
     .rick-spacer, .mark-spacer, .clint-spacer, .jaime-spacer {
+        display: none;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 769px) and (max-width: 936px) {
+    .title-pad {
+        padding-top: 2rem;
+    }
+    .container-pad {
+        padding-top: 3rem;
+    }
+    .bold-title {
+        font-size: 2.5rem;
+        font-weight: 900;
+        padding-top: 2rem;
+    }
+    .bold-title-lt {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+    .location-text {
+        font-size: .8rem;
+    }
+    #services-desktop {
+        display: none;
+    }
+    #btn-desktop {
+        display: none;
+    }
+
+}
+
+/* DESKTOP */
+@media screen and (min-width: 937px) {
+    #services-mobile {
+        display: none;
+    }
+    #btn-tablet {
         display: none;
     }
 }
