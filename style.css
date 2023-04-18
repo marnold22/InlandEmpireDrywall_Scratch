@@ -75,8 +75,11 @@ html{scroll-behavior:smooth}
     font-size: 1.5rem;
     padding-top: 1rem;
 }
-.hero-col {
-    margin-top: 6rem;
+.title-pad {
+    padding-top: 15rem;
+}
+.container-pad {
+    padding-top: 3rem;
 }
 .hero-container {
     padding: 2rem;
