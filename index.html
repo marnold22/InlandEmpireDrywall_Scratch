@@ -8,6 +8,7 @@
     <title>Inland Empire Drywall</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6621c73f86.js" crossorigin="anonymous"></script>
 
     <!-- Bulma Version 0.9.0-->
@@ -98,7 +99,7 @@
                                     <i class="fa-solid fa-users fa-2xl" style="color: #f1ae4a;"></i>
                                 </span>
                                 <h1 class="subtitle hero-sub">Amazing Team</h1>
-                                <button class="button is-responsive yellow-outline">About Us</button>
+                                <a href="#about"><button class="button is-responsive yellow-outline">About Us</button></a>
                             </div>
                         </div>
                     </div>
@@ -108,12 +109,12 @@
     </section>
 
     <!-- QUALITY MATERIALS SECTION -->
-    <section id="products" class="section is-medium">
+    <section id="products" class="section is-medium bg-grey">
 
         <!-- ROW 1 -->
         <div class="columns">
             <div class="column">
-                <h1 class="bold-title has-text-centered">Quality Materials at a Competitive Price</h1>
+                <h1 class="bold-title has-text-centered">Quality Materials <br> At a Competitive Price</h1>
             </div>
         </div>
 
@@ -148,8 +149,13 @@
             </div>
         </div>
 
-        <div class="columns btn-column">
+        <div id="btn-desktop" class="columns btn-column">
             <div class="column is-2 is-offset-5">
+                <a href="products.html"><button class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">View Products</button></a>
+            </div>
+        </div>
+        <div id="btn-tablet" class="columns btn-column">
+            <div class="column ">
                 <a href="products.html"><button class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">View Products</button></a>
             </div>
         </div>
@@ -157,37 +163,92 @@
 
     <!-- SERVICES SECTION -->
     <section id="services" class="section services-parallax">
-        <div class="container">
+        <div id="services-desktop" class="container">
             <div class="columns is-0">
                 <div class="column is-4 is-offset-2">
                     <div class="card services-card">
                         <div class="card-content">
-                          <div class="content">
-                            <h1 class="has-text-white has-text-centered">- Will Call -</h1>
-                            <p class="has-text-white">Customers may also call orders in ahead of time for pickup at a local yard, and we’ll have it ready to go when you arrive.  It’s just another way we go the extra mile to provide exceptional customer service.</p>
-                          </div>
+                            <div class="content">
+                                <h1 class="has-text-white has-text-centered">- Will Call -</h1>
+                                <p class="has-text-white">Customers may also call orders in ahead of time for pickup at a local
+                                    yard, and we’ll have it ready to go when you arrive. It’s just another way we go the extra
+                                    mile to provide exceptional customer service.</p>
+                            </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="column is-4">
                     <div class="card services-card">
                         <div class="card-content">
-                          <div class="content">
-                            <h1 class="has-text-white has-text-centered">- Delivery -</h1>
-                            <p class="has-text-white"> We are dedicated to providing efficient, accurate, and timely home deliveries as part of our commitment to excellent customer service.  We also make every effort to protect your materials along the way.</p>
-                          </div>
+                            <div class="content">
+                                <h1 class="has-text-white has-text-centered">- Delivery -</h1>
+                                <p class="has-text-white"> We are dedicated to providing efficient, accurate, and timely home
+                                    deliveries as part of our commitment to excellent customer service. We also make every
+                                    effort to protect your materials along the way.</p>
+                            </div>
                         </div>
-                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="services-mobile" class="container">
+            <div class="columns is-0">
+                <div class="column is-6">
+                    <div class="card services-card">
+                        <div class="card-content">
+                            <div class="content">
+                                <h1 class="has-text-white has-text-centered">- Will Call -</h1>
+                                <p class="has-text-white">Customers may also call orders in ahead of time for pickup at a local
+                                    yard, and we’ll have it ready to go when you arrive. It’s just another way we go the extra
+                                    mile to provide exceptional customer service.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <div class="card services-card">
+                        <div class="card-content">
+                            <div class="content">
+                                <h1 class="has-text-white has-text-centered">- Delivery -</h1>
+                                <p class="has-text-white"> We are dedicated to providing efficient, accurate, and timely home
+                                    deliveries as part of our commitment to excellent customer service. We also make every
+                                    effort to protect your materials along the way.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="section is-medium">
+        <h1 class="has-text-centered about-title">Who Are We?</h1>
+
+        <div class="container">
+            <p class="has-text-centered about-text">
+                <em>Inland Empire Drywall Supply is a building supplier that specializes in building products for the residential and commercial drywall contractor. Our Mission is to provide superior service to the drywall construction professional, while supplying materials at a competitive price.</em>
+            </p>
+        </div>
+
+        <div id="btn-desktop" class="columns btn-column">
+            <div class="column is-2 is-offset-5">
+                <a href="about.html"><button class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">See the Team</button></a>
+            </div>
+        </div>
+        <div id="btn-tablet" class="columns btn-column">
+            <div class="column ">
+                <a href="about.html"><button class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">See The Team</button></a>
+            </div>
+        </div>
+    </section>
+
     <!-- CLIENTS REVIEW SECTION -->
-    <section class="section is-medium bg-grey">
+    <section id="clients" class="section is-medium bg-grey">
         <!-- ROW 1 -->
         <div class="container">
-            <h1 class="bold-title has-text-centered">What Clients Say</h1>
+            <h1 class="bold-title has-text-centered">What Our Clients Say</h1>
             <div class="columns">
                 <div class="column is-4">
                     <div class="card">
@@ -201,7 +262,7 @@
                             <div class="media-content">
                               <p class="title is-4">MATTHEW SCALISE</p>
                               <p class="subtitle is-6">
-                                <div class="columns">
+                                <div class="columns stars">
                                     <div class="column is-1"><i class="fa-solid fa-star fa-lg" style="color: #232b38;"></i></div>
                                     <div class="column is-1"><i class="fa-solid fa-star fa-lg" style="color: #232b38;"></i></div>
                                     <div class="column is-1"><i class="fa-solid fa-star fa-lg" style="color: #232b38;"></i></div>
@@ -229,7 +290,7 @@
                             <div class="media-content">
                               <p class="title is-4">TOM MITCHELL</p>
                               <p class="subtitle is-6">
-                                <div class="columns">
+                                <div class="columns stars">
                                     <div class="column is-1"><i class="fa-solid fa-star fa-lg" style="color: #232b38;"></i></div>
                                     <div class="column is-1"><i class="fa-solid fa-star fa-lg" style="color: #232b38;"></i></div>
                                     <div class="column is-1"><i class="fa-solid fa-star fa-lg" style="color: #232b38;"></i></div>
@@ -257,7 +318,7 @@
                             <div class="media-content">
                               <p class="title is-4">HANNAH WORKMAN</p>
                               <p class="subtitle is-6">
-                                <div class="columns">
+                                <div class="columns stars">
                                     <div class="column is-1"><i class="fa-solid fa-star fa-lg" style="color: #232b38;"></i></div>
                                     <div class="column is-1"><i class="fa-solid fa-star fa-lg" style="color: #232b38;"></i></div>
                                     <div class="column is-1"><i class="fa-solid fa-star fa-lg" style="color: #232b38;"></i></div>
@@ -275,17 +336,12 @@
                 </div>
             </div>
         </div>
-        <div class="columns btn-column">
-            <div class="column is-2 is-offset-5">
-                <a href="about.html"><button class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">About Us</button></a>
-            </div>
-        </div>
     </section>
 
     <!-- BRANDS CAROUSEL -->
     <section class="section is-medium">
         <div class="container carousel-container">
-            <h1 class="bold-title has-text-centered">Fantastic Brands We Work With</h1>
+            <h1 class="bold-title has-text-centered">Fantastic Brands <br>We Work With</h1>
             <!-- Start Carousel -->
             <div id="brand-carousel" class="brand-carousel">
                 <div class="item-1">
