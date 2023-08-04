@@ -58,6 +58,9 @@ html{scroll-behavior:smooth}
 .navbar {
     padding-top: 2rem;
 }
+.nav-a {
+    color: #ffffff;
+}
 
 /* HERO BANNER SECTION */
 .hero-home {
@@ -75,6 +78,7 @@ html{scroll-behavior:smooth}
 }
 .hero .title {
     font-size: 4rem;
+    color: #ffffff;
 }
 .hero-sub {
     font-size: 1.5rem;
