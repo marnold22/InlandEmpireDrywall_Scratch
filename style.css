@@ -111,9 +111,16 @@ html{scroll-behavior:smooth}
     border-radius: 4px;
     border-color: var(--yellow);
 }
+.services-card:hover {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    transition: 200ms linear;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* MATERIALS SECTION */
-.card:hover {
+.material-card:hover {
     -webkit-transform: scale(1.03);
     -ms-transform: scale(1.03);
     transform: scale(1.03);
@@ -130,7 +137,7 @@ html{scroll-behavior:smooth}
     padding-top: 2rem;
 }
 
-/* ABOUT/CLIENTS SECTION */
+/* ABOUT CLIENTS SECTION */
 .about-title {
     color: var(--grey);
     font-size: 4rem;
@@ -174,6 +181,13 @@ html{scroll-behavior:smooth}
     padding-bottom: 1rem;
     font-weight: 200;
 }
+
+/* CONTACT SECTION */
+.contact {
+    padding-top: 3rem;
+    text-align: center;
+}
+
 
 /* ---------------- PRODUCTS PAGE ---------------- */
 /* HERO BANNER */
