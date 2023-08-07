@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         );
 
         //Recipients
-        $mail->setFrom($_ENV["FROM_EMAIL"], 'IED-SMTP');           // Set default address that emails are sent from
+        $mail->setFrom($_ENV["FROM_EMAIL"], 'Inland Empire Website');           // Set default address that emails are sent from
         $mail->addAddress($_ENV["TO_EMAIL"], 'Inland Empire Drywall');          // This is who the email is being sent to (ie. Ben's work email)
 
         // Content
