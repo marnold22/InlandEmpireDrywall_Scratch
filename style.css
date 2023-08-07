@@ -61,6 +61,9 @@ html{scroll-behavior:smooth}
 .nav-a {
     color: #ffffff;
 }
+.nav-a:hover {
+    color: var(--yellow) !important;
+}
 
 /* HERO BANNER SECTION */
 .hero-home {
@@ -78,6 +81,9 @@ html{scroll-behavior:smooth}
 }
 .hero .title {
     font-size: 4rem;
+    color: #ffffff;
+}
+.hero .subtitle {
     color: #ffffff;
 }
 .hero-sub {
