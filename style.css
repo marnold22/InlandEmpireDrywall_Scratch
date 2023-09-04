@@ -1,8 +1,8 @@
 :root {
-    --light-blue: rgb(8, 50, 92);
-    --blue-no-alpha: rgb(35,43,56);
+    --light-blue: #08325c;
+    --blue-no-alpha: #232b38;
     --blue: rgba(18, 22, 29, 0.8);
-    --yellow: rgb(241, 174, 74);
+    --yellow: #f1ae4a;
     --grey: #3d3d3d;
     --dark: #222222;
 }
@@ -63,6 +63,11 @@ html{scroll-behavior:smooth}
 }
 .nav-a:hover {
     color: var(--yellow) !important;
+}
+
+/* Change bulma settings for mobile navbar */
+.navbar-menu {
+    background-color: var(--blue-no-alpha);
 }
 
 /* HERO BANNER SECTION */
