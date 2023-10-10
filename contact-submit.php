@@ -29,6 +29,24 @@ function reset_form_data()
     $name_err = $email_err = $message_err = "";
 }
 
+// RECAPTCHA
+function reCaptcha($recaptcha)
+{
+    $secret = $_ENV['SECRET_KEY'];
+    $ip = $_SERVER['REMOTE_ADDR'];
+
+    $postvars = array("secret" => $secret, "response" => $recaptcha, "remoteip" => $ip);
+    $url = "https://www.google.com/recaptcha/api/siteverify";
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $postvars);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    return json_decode($data, true);
+}
+
 // Set initial variables to empty string ""
 $name = $email = $message = "";
 $name_err = $email_err = $message_err = "";
@@ -61,57 +79,65 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = clean_input($_POST["message"]);
 
 
-    if ($name_err == "" && $email_err == "" && $message_err == "") {
-        // SEND EMAIL
-
-        //Unset the post submission (for next load)
-        unset($_POST['submit']);
-
-        // Compose the email
-        $composed_email = "";
-        $composed_email .= "Name: " . $name . "<br>";
-        $composed_email .= "Email: " . $email . "<br>";
-        $composed_email .= "Message: " . $message . "<br>";
-
-        // Create new PHPMailer object
-        $mail = new PHPMailer(TRUE);
-
-        // Test Settings for SMTP Server
-        $mail->SMTPDebug = SMTP::DEBUG_OFF;
-        $mail->isSMTP();
-        $mail->Host       = $_ENV["SMTP_HOST"];
-        $mail->SMTPAuth   = true;
-        $mail->Username   = $_ENV["FROM_EMAIL"];
-        $mail->Password   = $_ENV["FROM_EMAIL_PASS"];
-        $mail->Port       = 587;
-        $mail->SMTPOptions = array(
-            'ssl' => array(
-                'verify_peer' => false,
-                'verify_peer_name' => false,
-                'allow_self_signed' => true
-            )
-        );
-
-        //Recipients
-        $mail->setFrom($_ENV["FROM_EMAIL"], 'Inland Empire Website');           // Set default address that emails are sent from
-        $mail->addAddress($_ENV["TO_EMAIL"], 'Inland Empire Drywall');          // This is who the email is being sent to (ie. Ben's work email)
-
-        // Content
-        $mail->isHTML(true);                                              // Set email format to HTML
-        $mail->Subject = 'Request More Information From Website';         // Subject
-        $mail->Body    = $composed_email;                                 // Body
-        $mail->AltBody = $composed_email;                                 // Alt. Body
-
-        // Send the email
-        if ($mail->send()) {
-            $mailsend_success = "Message sent! Thank you for contacting us.";
-            // echo '<script>alert("' . $mailsend_success . '")</script>';
-            reset_form_data();
-            header("Location: thankyou.html");
-        } else {
-            $mailsend_error = "Message could not be sent. Mailer Error: {" . $mail->ErrorInfo . "}";
-            echo '<script>alert("' . $mailsend_error . '")</script>';
-            reset_form_data();
+    // SET RECAPTCHA
+    $recaptcha = $_POST['g-recaptcha-response'];
+    $res = reCaptcha($recaptcha);
+    
+    if ($res['success']) {
+        if ($name_err == "" && $email_err == "" && $message_err == "") {
+            // SEND EMAIL
+    
+            //Unset the post submission (for next load)
+            unset($_POST['submit']);
+    
+            // Compose the email
+            $composed_email = "";
+            $composed_email .= "Name: " . $name . "<br>";
+            $composed_email .= "Email: " . $email . "<br>";
+            $composed_email .= "Message: " . $message . "<br>";
+    
+            // Create new PHPMailer object
+            $mail = new PHPMailer(TRUE);
+    
+            // Test Settings for SMTP Server
+            $mail->SMTPDebug = SMTP::DEBUG_OFF;
+            $mail->isSMTP();
+            $mail->Host       = $_ENV["SMTP_HOST"];
+            $mail->SMTPAuth   = true;
+            $mail->Username   = $_ENV["FROM_EMAIL"];
+            $mail->Password   = $_ENV["FROM_EMAIL_PASS"];
+            $mail->Port       = 587;
+            $mail->SMTPOptions = array(
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                )
+            );
+    
+            //Recipients
+            $mail->setFrom($_ENV["FROM_EMAIL"], 'Inland Empire Website');           // Set default address that emails are sent from
+            $mail->addAddress($_ENV["TO_EMAIL"], 'Inland Empire Drywall');          // This is who the email is being sent to (ie. Ben's work email)
+    
+            // Content
+            $mail->isHTML(true);                                              // Set email format to HTML
+            $mail->Subject = 'Request More Information From Website';         // Subject
+            $mail->Body    = $composed_email;                                 // Body
+            $mail->AltBody = $composed_email;                                 // Alt. Body
+    
+            // Send the email
+            if ($mail->send()) {
+                $mailsend_success = "Message sent! Thank you for contacting us.";
+                // echo '<script>alert("' . $mailsend_success . '")</script>';
+                reset_form_data();
+                header("Location: thankyou.html");
+            } else {
+                $mailsend_error = "Message could not be sent. Mailer Error: {" . $mail->ErrorInfo . "}";
+                echo '<script>alert("' . $mailsend_error . '")</script>';
+                reset_form_data();
+            }
         }
+    }else {
+        echo '<script>alert("ERROR: ReCaptcha Not Successful")</script>';
     }
 }
