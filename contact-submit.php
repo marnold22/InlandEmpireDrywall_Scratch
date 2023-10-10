@@ -13,6 +13,22 @@ require 'vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+// START FORM PROCESS
+// Check if form is submitted
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // SET RECAPTCHA
+    $recaptcha = $_POST['g-recaptcha-response'];
+    $res = reCaptcha($recaptcha);
+
+    if ($res['success']) {
+        echo '<script>alert("CORRECT: ReCaptcha Successful")</script>';
+    }else{
+        echo '<script>alert("ERROR: ReCaptcha Not Successful")</script>';
+    }
+}
+
 
 // RECAPTCHA
 function reCaptcha($recaptcha){
@@ -30,20 +46,4 @@ function reCaptcha($recaptcha){
     curl_close($ch);
   
     return json_decode($data, true);
-  }
-
-// START FORM PROCESS
-// Check if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-
-    // SET RECAPTCHA
-    $recaptcha = $_POST['g-recaptcha-response'];
-    $res = reCaptcha($recaptcha);
-
-    if ($res['success']) {
-        echo '<script>alert("CORRECT: ReCaptcha Successful")</script>';
-    }else {
-        echo '<script>alert("ERROR: ReCaptcha Not Successful")</script>';
-    }
 }
