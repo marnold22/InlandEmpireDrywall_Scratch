@@ -48,17 +48,17 @@
                     <div id="navbarMenu" class="navbar-menu">
                         <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class="is-white is-outlined nav-a" href="index.html">
+                                <a class="is-white is-outlined nav-a" href="index.php">
                                     <span>HOME</span>
                                 </a>
                             </span>
                             <span class="navbar-item">
-                                <a class="is-white is-outlined nav-a" href="products.html">
+                                <a class="is-white is-outlined nav-a" href="products.php">
                                     <span>PRODUCTS</span>
                                 </a>
                             </span>
                             <span class="navbar-item">
-                                <a class="is-white is-outlined nav-a" href="about.html">
+                                <a class="is-white is-outlined nav-a" href="about.php">
                                     <span>ABOUT</span>
                                 </a>
                             </span>
@@ -392,6 +392,9 @@
             <p class="">© 2023 Inland Empire Drywall. <br> All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- REPCAPTCHA JS -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
     <script async type="text/javascript" src="bulma.js"></script>
 </body>
