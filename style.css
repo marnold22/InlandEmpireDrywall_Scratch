@@ -277,6 +277,12 @@ nav.navbar {
     padding-bottom: 5rem;
 }
 
+/* ---------------- CONTACT RECAPTCHA ---------------- */
+div.g-recaptcha {
+    margin: 0 auto;
+    width: 320px;
+}
+
 /* MEDIA QUERIES */
 
 /* MOBILE */
