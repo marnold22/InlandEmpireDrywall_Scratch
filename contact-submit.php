@@ -36,6 +36,11 @@ function reCaptcha($recaptcha)
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+
+    // SET RECAPTCHA
+    $recaptcha = $_POST['g-recaptcha-response'];
+    $res = reCaptcha($recaptcha);
+    
     if ($res['success']) {
         echo '<script>alert("CORRECT: ReCaptcha Successful")</script>';
     }else {
