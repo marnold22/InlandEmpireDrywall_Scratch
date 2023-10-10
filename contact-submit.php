@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // SET RECAPTCHA
     $recaptcha = $_POST['g-recaptcha-response'];
     $res = reCaptcha($recaptcha);
-    
+
     if ($res['success']) {
         if ($name_err == "" && $email_err == "" && $message_err == "") {
             // SEND EMAIL
@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail = new PHPMailer(TRUE);
     
             // Test Settings for SMTP Server
-            $mail->SMTPDebug = SMTP::DEBUG_OFF;
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;
             $mail->isSMTP();
             $mail->Host       = $_ENV["SMTP_HOST"];
             $mail->SMTPAuth   = true;
