@@ -15,12 +15,11 @@ $dotenv->load();
 
 
 // RECAPTCHA
-function reCaptcha($recaptcha)
-{
-    $secret = $_ENV['SECRET_KEY'];
+function reCaptcha($recaptcha){
+    $secret = $_ENV["SECRET_KEY"];
     $ip = $_SERVER['REMOTE_ADDR'];
-
-    $postvars = array("secret" => $secret, "response" => $recaptcha, "remoteip" => $ip);
+  
+    $postvars = array("secret"=>$secret, "response"=>$recaptcha, "remoteip"=>$ip);
     $url = "https://www.google.com/recaptcha/api/siteverify";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -29,8 +28,9 @@ function reCaptcha($recaptcha)
     curl_setopt($ch, CURLOPT_POSTFIELDS, $postvars);
     $data = curl_exec($ch);
     curl_close($ch);
+  
     return json_decode($data, true);
-}
+  }
 
 // START FORM PROCESS
 // Check if form is submitted
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // SET RECAPTCHA
     $recaptcha = $_POST['g-recaptcha-response'];
     $res = reCaptcha($recaptcha);
-    
+
     if ($res['success']) {
         echo '<script>alert("CORRECT: ReCaptcha Successful")</script>';
     }else {
