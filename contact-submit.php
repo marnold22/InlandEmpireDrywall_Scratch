@@ -78,7 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // MESSAGE
     $message = clean_input($_POST["message"]);
 
-
     // SET RECAPTCHA
     $recaptcha = $_POST['g-recaptcha-response'];
     $res = reCaptcha($recaptcha);
