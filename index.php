@@ -484,7 +484,7 @@
             <!-- Contact Form -->
             <div id="contact" class="contact">
                 <h2 class="title is-2 is-capitalized bold-title-lt">Contact Us</h2>
-                <form action="contact-submit.php" method="post">
+                <form name="contact-us" method="POST" action="contact-submit.php">
                     <div class="field">
                         <label for="name" class="label is-size-4 has-text-weight-light"></label>
                         <div class="control has-icons-left">

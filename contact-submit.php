@@ -13,21 +13,6 @@ require 'vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// Clean user input function
-function clean_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
-// Reset Form
-function reset_form_data()
-{
-    $name = $email = $message = "";
-    $name_err = $email_err = $message_err = "";
-}
 
 // RECAPTCHA
 function reCaptcha($recaptcha)
@@ -47,40 +32,9 @@ function reCaptcha($recaptcha)
     return json_decode($data, true);
 }
 
-// Set initial variables to empty string ""
-$name = $email = $message = "";
-$name_err = $email_err = $message_err = "";
-
-
 // START FORM PROCESS
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // Check required fields are filled
-    if (!isset($_POST["name"]) || !isset($_POST["email"]) || !isset($_POST["message"])) {
-        echo "Sorry one of the required fields is missing, please try again!";
-        $name_err = $email_err = $message_err = "REQUIRED FIELDS";
-        die();
-    }
-
-    // NAME
-    $name = clean_input($_POST["name"]);
-    if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
-        $name_err = "Only letters and whitespace allowed.";
-    }
-
-    // EMAIL
-    $email = clean_input($_POST["email"]);
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $email_error = "Invalid email format";
-    }
-
-    // MESSAGE
-    $message = clean_input($_POST["message"]);
-
-    // SET RECAPTCHA
-    $recaptcha = $_POST['g-recaptcha-response'];
-    $res = reCaptcha($recaptcha);
 
     if ($res['success']) {
         echo '<script>alert("CORRECT: ReCaptcha Successful")</script>';
