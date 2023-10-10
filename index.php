@@ -1,3 +1,12 @@
+<?php 
+    // Load Composer's autoloader
+    require 'vendor/autoload.php';
+    //Load .env file
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -499,6 +508,9 @@
                         <textarea name="message" id="message" rows="5" class="textarea is-medium"
                             placeholder="Message" required></textarea>
                     </div>
+                    <div class="column">
+                        <div class="g-recaptcha brochure__form__captcha" data-sitekey="<?= $_ENV["SITE_KEY"]?>"></div>
+                    </div>
                     <button type="submit" class="button is-medium is-responsive yellow-outline">Submit</button>
                 </form>
             </div>
@@ -512,6 +524,8 @@
         </div>
     </footer>
 
+    <!-- REPCAPTCHA JS -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
     <!-- BULMA CAROUSEL -->
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
