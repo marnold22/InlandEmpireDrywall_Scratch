@@ -174,14 +174,14 @@
 
         <div id="btn-desktop" class="columns btn-column">
             <div class="column is-2 is-offset-5">
-                <a href="products.html"><button
+                <a href="products.php"><button
                         class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">View
                         Products</button></a>
             </div>
         </div>
         <div id="btn-tablet" class="columns btn-column">
             <div class="column ">
-                <a href="products.html"><button
+                <a href="products.php"><button
                         class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">View
                         Products</button></a>
             </div>
@@ -271,13 +271,13 @@
 
         <div id="btn-desktop" class="columns btn-column">
             <div class="column is-2 is-offset-5">
-                <a href="about.html"><button class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">See
+                <a href="about.php"><button class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">See
                         the Team</button></a>
             </div>
         </div>
         <div id="btn-tablet" class="columns btn-column">
             <div class="column ">
-                <a href="about.html"><button class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">See
+                <a href="about.php"><button class="button is-rounded is-medium is-fullwidth is-responsive blue-btn">See
                         The Team</button></a>
             </div>
         </div>
