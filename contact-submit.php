@@ -103,8 +103,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host       = $_ENV["SMTP_HOST"];
             $mail->SMTPAuth   = true;
-            $mail->Username   = $_ENV["FROM_EMAIL"];
-            $mail->Password   = $_ENV["FROM_EMAIL_PASS"];
+            $mail->Username   = $_ENV["USERNAME"];
+            $mail->Password   = $_ENV["PASS"];
             $mail->Port       = 587;
             $mail->SMTPOptions = array(
                 'ssl' => array(
