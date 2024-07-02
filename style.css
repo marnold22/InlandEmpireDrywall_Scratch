@@ -276,6 +276,9 @@ nav.navbar {
 .clint-spacer {
     padding-bottom: 5rem;
 }
+.terri-spacer{
+    padding-bottom: 1rem;
+}
 
 /* ---------------- CONTACT RECAPTCHA ---------------- */
 div.g-recaptcha {

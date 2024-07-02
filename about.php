@@ -197,7 +197,7 @@
                                     </p>
                                     <p class="subtitle is-6"><em>Favorite Quote:</em> “Never stop being a good person
                                         because of bad people.” - Jay Shetty</p>
-                                    <p class="subtitle is-6"></p>
+                                    <p class="terri-spacer"></p>
                                 </div>
                             </div>
                         </div>
@@ -219,8 +219,8 @@
                                         tasks.</p>
                                     <p class="subtitle is-6"><em>Hobies & Interests:</em> Kim enjoys crafting, being
                                         outdoors, and spending time with her Granddaughter.</p>
-                                    <p class="subtitle is-6"><em>Favorite Quote:</em> “Do not worry about tomorrow, for
-                                        each day has enough trouble of its own.” - Matthew 6:34</p>
+                                    <p class="subtitle is-6"><em>Favorite Quote:</em> "Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own." - Matthew 6:34
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -245,6 +245,7 @@
                                         bowling, and hunting.</p>
                                     <p class="subtitle is-6"><em>Favorite Quote:</em> “Life is like a box of chocolates.
                                         You never know what you are gonna get.” - Forrest Gump</p>
+                                    <p class="willie-spacer"></p>
                                 </div>
                             </div>
                         </div>
